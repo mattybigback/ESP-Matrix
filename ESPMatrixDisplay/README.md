@@ -1,5 +1,5 @@
 # ESP Matrix Display
-A simple scrolling message display that can be updated over WiFi from a web browser
+A simple scrolling message display that can be updated over WiFi from a web browser.
 
 ## Hardware Requirements
 
@@ -21,8 +21,15 @@ Additonally, the ESP8266 Arduino core must be installed.
 
 ## Operation
 
-When the module first starts it will be in WiFiManager mode. This creates an access point which allows for an SSID and passcode to be entered. To access the configuration page manually navigate to the static IP address in any web browser (by defult this is set as 10.0.0.1) The display does not scroll during this time.
+### Access point mode (first boot)
+When the module first starts it will be in WiFiManager mode. Nothing is displayed during this time.
+
+The ESP module starts in access point mode, with a unique network name (SSID). Connect to this network using your device and you should be automatically taken to the configuration page. To access the configuration page manually navigate to the static IP address in any web browser (by default this is set as 10.0.0.1).
+
+Access point mode is entered whenever a successful connection to WiFi could not be made.
+
+### Normal operation
 
 Once a connection to a WiFi network has been established the matrix will scroll the IP address of the configuration page, followed by either the build-in message or whichever message is stored in the ESP file system. The first message to be shown on connection to the WiFi network will always be the local IP addess.
 
-The configuration page is a simple form that has fields for a message, the display intensity (brightness) and scroll speed. When a new message is sent the old message is interrupted and the display cleared.
+The configuration page is a simple form that has fields for a message, the display intensity (brightness) and scroll speed. When a new message is sent the old message is interrupted and the display cleared. Messages are stored in the ESP module's file system, so they are retained even when the system is powered down.
