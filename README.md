@@ -15,9 +15,9 @@ The following  libraries must be installed from the Arduino IDE library manager.
 
 | Library | Version | Author |
 |---|---|---|
-| MD_MAX72XX | 3.2.1 | majicDesigns |
-| MD_Parola | 3.3.0 | majicDesigns |
-| WiFiManager | 0.15.0 | tzapu |
+| [MD_MAX72XX](https://github.com/MajicDesigns/MD_MAX72XX) | 3.2.1 | majicDesigns |
+| [MD_Parola](https://github.com/MajicDesigns/MD_Parola) | 3.3.0 | majicDesigns |
+| [WiFiManager](https://github.com/tzapu/WiFiManager) | 0.15.0 | tzapu |
 
 Additonally, the ESP8266 Arduino core must be installed.
 
